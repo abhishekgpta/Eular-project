@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+void lpf(long long int x)
+{
+        long long int lpf = 2;
+        while (x > lpf)
+        {
+                if (x%lpf==0)
+                {
+                        x = x/lpf;
+                        lpf = 2;
+                }
+                else
+                {
+                        lpf++;
+                }
+        }
+        printf("Largest Prime Factor: %lld\n",lpf);
+}
+ 
+int main ()
+{
+        long long int x;
+        printf("Input long int:\n");
+        scanf("%lld",&x);
+        lpf(x);
+        return 0;
+}
