@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<math.h>
+int prime(int num){
+	int i;
+	if(num==2){
+		return 1;
+	}
+	for(i=2;i<sqrt(num)+1;i++){
+		if(num%i==0){
+			return 0;
+		}
+	}
+	return 1;
+}
+int main(void) {
+	int count=0,an;
+	int i;
+	for(i=2;i<2000000;i++){
+		if(prime(i)==1){
+			count++;
+			an=i;
+		}
+		if(count==10001){
+			break;
+		}
+		
+	}
+	printf("%d",an);
+	// your code goes here
+	return 0;
+}
