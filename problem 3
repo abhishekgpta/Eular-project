@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
  
-void lpf(long long int x)
+void lpf(long long int x)                          /*function for largest prime factor*/
 {
         long long int lpf = 2;
         while (x > lpf)
